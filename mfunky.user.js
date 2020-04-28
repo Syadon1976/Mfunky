@@ -4,10 +4,10 @@
 // @version 1.0.3
 // @description Cotg Mfunky
 // @author Mohnki
-// @match https://w12.crownofthegods.com
-// @match https://w19.crownofthegods.com
+// @match https://infected.crownofthegods.com/
+// @match https://w20.crownofthegods.com
 // @match https://w18.crownofthegods.com
-// @match https://w17.crownofthegods.com
+// @match https://w19.crownofthegods.com
 // @include https://w/*.crownofthegods.com/World*
 // @grant none
 // @updateURL https://github.com/Mohnki/Mfunky/raw/master/mfunky.user.js
@@ -2605,7 +2605,7 @@
         var bossactive=data.info.active;
         //       var troops = cotg.city.troops();
         var home;
-        var optimalTS= Math.ceil((other_loot[lvl-1]/10 * ((1-prog/100)+1))*1.05);
+        var optimalTS= Math.ceil((other_loot[lvl-1]/10 * ((1-prog/100)+1))*1.07);
         if(dtype==="dungeon"){
             if($("#cityplayerInfo div table tbody tr").length===11){
                 bossele();
@@ -2655,7 +2655,7 @@
             if(type==="Mountain Cavern"){
                 document.getElementById('raidDungGo').onclick = function() {
                     setTimeout(function(){
-                        var total_lootm= Math.ceil((mountain_loot[Number(lvl)-1] * ((1-Number(prog)/100)+1))*1.05);
+                        var total_lootm= Math.ceil((mountain_loot[Number(lvl)-1] * ((1-Number(prog)/100)+1))*1.07);
                         if(home_loot>total_lootm){
                             var option_numbersm=Math.floor(home_loot/total_lootm);
                             var templ1m=((home_loot/total_lootm)*100)/option_numbersm;
@@ -2670,7 +2670,7 @@
                         }
                     }, 1500);
                 };
-                var optimalTSM= Math.ceil((mountain_loot[lvl-1]/10 * ((1-prog/100)+1))*1.05);
+                var optimalTSM= Math.ceil((mountain_loot[lvl-1]/10 * ((1-prog/100)+1))*1.07);
                 var cavoptim=Math.ceil((optimalTSM *2)/3);
                 var praoptim=Math.ceil(optimalTSM/2);
                 var sorcoptim=Math.ceil(optimalTSM *2);
@@ -2694,7 +2694,7 @@
             if(type==="Hill Cavern" || type==="Forest Cavern"){
                 document.getElementById('raidDungGo').onclick = function() {
                     setTimeout(function(){
-                        var total_looto= Math.ceil((other_loot[Number(lvl)-1] * ((1-Number(prog)/100)+1))*1.05);
+                        var total_looto= Math.ceil((other_loot[Number(lvl)-1] * ((1-Number(prog)/100)+1))*1.07);
                         if(home_loot>total_looto){
                             var option_numbers=Math.floor(home_loot/total_looto);
                             var templ1=((home_loot/total_looto)*100)/option_numbers;
@@ -3148,7 +3148,7 @@
                 var type_dung=$(this).attr('type');
                 if(type_dung==="Mountain"){loot1=mountain_loot;}
                 else{loot1=other_loot;}
-                var total_loot= Math.ceil((loot1[Number(dunglvl)-1] * ((1-Number(progress)/100)+1))*1.02);
+                var total_loot= Math.ceil((loot1[Number(dunglvl)-1] * ((1-Number(progress)/100)+1))*1.07);
                 $("#dungloctab").find(".addraiwc td:nth-child(4)").html("<button id='raid115' style='padding: 4px; border-radius: 8px;' class='greenb shRnTr'>115%</button>");
                 $("#dungloctab").find(".addraiwc td:nth-child(2)").html("<button id='raidAll' style='padding: 4px; border-radius: 8px;' class='greenb shRnTr'>Use All TS</button>");
                 //              var troops = cotg.city.troops();
@@ -3643,6 +3643,62 @@
                         string: "[ShareString.1.3];########################-------#-------#####BBB-----#--------###BGBGB----#---------##BBBBB----#---------##BGGG--#######------##-BBB-##BBBBB##-----##----##BGGBGGB##----##----#BBBBBBBBB#----##----#BGGBGBGGB#----#######BBBBTBBBB#######----#BGGBGBGGB#----##----#BBBBBBBBB#----##-SSX##BGGBGGB##----##-----##BBBBB##-----##---J--#######--RR--##---------#----R##R-##---------#----R###R###--------#-----R#######-------#------R########################",
                         remarks: "Rng Ship",
                         notes: "260K Arb",
+                        troop_count: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                        res_count: [0,0,0,0,1,575000,575000,575000,575000,0,0,0,0,1,0,0,0,0,0,575000,575000,575000,575000]
+                    },
+                    {
+                        name: "Gatekeeper 4s sorc 192k",
+                        string: "[ShareString.1.3]:########################JBJBJ--#-------#####BJBJBJB-#--------###-BJBJBJ--#---------##-BJBJB---#---------##-BJBJ-#######------##-BJB-##JBJBJ##-----##----##BJBJBJB##----##----#JBJBJBJBJ#----##----#JBJBJBJBJ#----#######JBJBTBJBJ#######----#JBJBJBJBJ#----##----#JBJBJBJBJ#----##----##BJBJBJB##----##-----##JBJBJ##-----##------#######------##--------X#---------##---------#---------###--------#--------#####-------#-------########################",
+                        remarks: "Sorc",
+                        notes: "192k Sorc 4s",
+                        troop_count: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                        res_count: [0,0,0,0,1,575000,575000,575000,575000,0,0,0,0,1,0,0,0,0,0,575000,575000,575000,575000]
+                    },
+                    {
+                        name: "Gatekeeper 10s druid 110k",
+                        string: "[ShareString.1.3]:########################-------#-------#####--------#--------###---------#---------##---------#---------##------#######------##-----##JBJBJ##-----##----##BJBJBJB##----##----#-BJBJBJB-#----##----#-BJBJBJB-#----#######-BJBTBJB-#######----#-BJBJBJB-#----##-BJB#-BJBJBJB-#----##JBJB##BJBJBJB##----##JBJBJ##JBJB-##-----##BBJBJB#######------##JBJBJBJB-#X--------#-BJBJBJB-#---------###-JBJBJB-#--------#####-BJB---#-------########################",
+                        remarks: "Druid",
+                        notes: "110K 10s Druid",
+                        troop_count: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                        res_count: [0,0,0,0,1,575000,575000,575000,575000,0,0,0,0,1,0,0,0,0,0,575000,575000,575000,575000]
+                    },
+                    {
+                        name: "Ashirra 33s scorp 21.6k ts",
+                        string: "[ShareString.1.3]:########################BBYB--X#-:-,-,-#####BYBYB-:-#-------;###-BYBYB--S#,-.-;----##-BYBYB,SS#,--------##:BYBYB#######.-;-,-##-BYBB##BYBYB##-----##--:-##YBYBYBY##-;--##-::-#BYBYBYBYB#----##----#BYBYBYBYB#--.-#######BYBYTYBYB#######-:--#BYBYBYBYB#----##----#BYBYBYBYB#-:-,##,---##YBYBYBY##----##-----##BYBYB##----.##------#######,-.--.##---------#..-,--.--##---------#-----.--,###-------,#,-:-----#####-------#,----.-########################",
+                        remarks: "Scorpion/ram 21.6kts",
+                        notes: "21.6kts scorp/ram",
+                        troop_count: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                        res_count: [0,0,0,0,1,575000,575000,575000,575000,0,0,0,0,1,0,0,0,0,0,575000,575000,575000,575000]
+                    },
+                    {
+                        name: "Gatekeeper 2s rangers",
+                        string: "[ShareString.1.3]:########################-------#-------#####--------#--------###---------#---------##---------#---------##------#######------##-----##BBBBB##-----##----##BGBGBGB##----##----#-BGBGBGB-#----##----#-BGBGBGB-#----#######-BGBTBGB-#######----#-BGBGBGB-#----##----#-BGBGBGB-#----##-BGB##BGBGBGB##----##-BGBB##BBBBB##-----##-BGBGB#######------##-BGBGBGB-#XJ-------##-BGBGBGB-#-P-------###BGBGBGB-#--------#####BBBBBB-#-------########################",
+                        remarks: "Ranger/triari",
+                        notes: "2/3 R/t 256k",
+                        troop_count: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                        res_count: [0,0,0,0,1,575000,575000,575000,575000,0,0,0,0,1,0,0,0,0,0,575000,575000,575000,575000]
+                    },
+                    {
+                        name: "Siolad Main Hub 20m all res",
+                        string: "[ShareString.1.3];########################-,,----#,------#####,----;-:#,,-..---###-,,,-----#----.--;-##----,-..-#-.---.---##--:---#######:--...##---:-##-----##-----##-,--##SSSSSSS##:---##,,-.#DAAAMAAAD#--;-##-,--#SSSSSSSSS#:---#######DDMMTMMDM#######PPPP#SSSSSSSSS#,,-.##PPPP#DLLLDLLLD#,--.##PPPP##SSSSSSS##----##PPPPP##-----##,,---##PPPPP-#######,-RR-:##PPPPP----#--JBR##R-##-PPPP----#-.Z-R###R###.------,#.----R#######.--,,,-#..-,--R########################",
+                        remarks: "Main hub 20m all res",
+                        notes: "Hub 20m all res",
+                        troop_count: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                        res_count: [0,0,0,0,1,575000,575000,575000,575000,0,0,0,0,1,0,0,0,0,0,575000,575000,575000,575000]
+                    },
+                    {
+                        name: "Siolad War Hub 38.9m wood/iron",
+                        string: "[ShareString.1.3];########################-------#-------#####--------#--------###---------#---------##---------#---------##------#######------##-----##SLSDS##-----##----##SSLSDSS##----##----#SLSLSDSDS#----##----#SLSLSDSDS#----#######SLSLTDSDS#######----#SLSLSDSDS#----##----#SLSLSDSDS#-P--##----##SSLSDSS##PPP-##-----##SLSDS##PPPPP##------#######PPRRPP##---------#--PPRTTRP##--------J#--PPRTTTR###--------#--PPPRTT#####-------#----PPR########################",
+                        remarks: "War hub 38.9m Wood/Iron",
+                        notes: "War Hub 38.9m Wood/Iron",
+                        troop_count: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                        res_count: [0,0,0,0,1,575000,575000,575000,575000,0,0,0,0,1,0,0,0,0,0,575000,575000,575000,575000]
+                    },
+                    {
+                        name: "Siolad spider Hub 14600 carts",
+                        string: "[ShareString.1.3];########################..-----#...----#####-.---:--#.-------###-------:-#---.-----##;-----:::#---------##---:--#######PPPPPP##,,---##-..--##PPPPP##----##,-----.##PPPP##,,,-#--------.#PPPP##,---#.-;JZB---#PPPP#######----T---:#######SSSS#,,,-----:#PPPP##SLMS#-------::#PPPP##SDAS##---.-::##PPPP##SSSS-##,-.--##PPPPP##------#######PPRRPP##------PPP#PPPPRTTRP##-------PP#PPPPRTTTR###------PP#PPPPPRTT#####--,--PP#PPPPPPR########################",
+                        remarks: "Spider hub 4.575m all res",
+                        notes: "spider Hub 4.575m all res",
                         troop_count: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                         res_count: [0,0,0,0,1,575000,575000,575000,575000,0,0,0,0,1,0,0,0,0,0,575000,575000,575000,575000]
                     },
